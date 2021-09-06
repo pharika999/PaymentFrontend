@@ -1,0 +1,57 @@
+    <div class="container">
+    <div class="row">
+        <div class="btn-group btn-group-toggle" data-toggle="buttons">
+            <label class="col-md-2 btn btn-primary active">
+              <input type="radio" name="customerLogin" id="customerLogin" autocomplete="off" [checked]="flag"
+               (change)="onChange(customerLogin)" #customerLogin> 
+              Customer Login
+            </label>
+            <label class="col-md-2 btn btn-primary">
+              <input type="radio" name="employeeLogin" id="employeeLogin" autocomplete="off" 
+              [checked]="!flag" (change)="onChange(employeeLogin)"
+              #employeeLogin>
+               Employee Login
+            </label>
+          </div>
+          <div class="col-md-4 offset-md-4" *ngIf="customerLogin.checked">
+            <div class="login-form bg-light mt-4 p-4">
+                <form action="" method="" class="row g-3">
+                    <h4>Customer Login</h4>
+                    <div class="col-12">
+                        <label>UserId</label>
+                        <input type="text" name="UserId" class="form-control"
+                         placeholder="UserId" [(ngModel)]="customerUser.userId">
+                    </div>
+                    <div class="col-12">
+                        <label>Password</label>
+                        <input type="password" name="password" class="form-control"
+                         placeholder="Password" [(ngModel)]="customerUser.password">
+                    </div>
+                    <div class="col-12">
+                        <button type="submit" class="btn btn-dark float-end">Login</button>
+                    </div>
+                 </form>
+            </div>
+        </div>
+        <div class="col-md-4 offset-md-4" *ngIf="employeeLogin.checked">
+            <div class="login-form bg-light mt-4 p-4">
+                <form action="" method="" class="row g-3">
+                    <h4>Employee Login</h4>
+                    <div class="col-12">
+                        <label>EmployeeId</label>
+                        <input type="text" name="UserId" class="form-control"
+                         placeholder="UserId" [(ngModel)]="employee.empId">
+                    </div>
+                    <div class="col-12">
+                        <label>Password</label>
+                        <input type="password" name="password" class="form-control"
+                         placeholder="Password" [(ngModel)]="employee.password">
+                    </div>
+                    <div class="col-12">
+                        <button type="submit" class="btn btn-dark float-end">Login</button>
+                    </div>
+                 </form>
+            </div>
+        </div>
+    </div>
+
