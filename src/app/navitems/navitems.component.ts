@@ -22,10 +22,6 @@ export class NavitemsComponent implements OnInit {
     {
       text: "Transaction",
       link: "transaction"
-    },
-    {
-      text:"Customer",
-      link:"customer"
     }
   ]
   }

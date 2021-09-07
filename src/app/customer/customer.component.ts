@@ -11,8 +11,7 @@ import { CustomerService } from 'src/service/customer.service';
 })
 export class CustomerComponent {
 
- 
-
+  
   private customer : any;
   constructor(public custsvc:CustomerService) {
 
@@ -23,7 +22,7 @@ export class CustomerComponent {
   
   ngOnInit(): void {
     if (this.custsvc.getCustomer.length == 0) {
-      this.custsvc.getDataFromApi('http://localhost:8080/customers/7671175954845')
+      this.custsvc.getDataFromApi('http://localhost:8080/customers/42895235807723')
         .subscribe((result: any) => {
           this. customer=result;
         },(err:any)=>{

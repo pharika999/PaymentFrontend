@@ -9,6 +9,7 @@ import { NavitemsComponent } from './navitems/navitems.component';
 import { EmployeeComponent } from './employee/employee.component';
 import { DataService } from './data.service';
 import { CustomerComponent } from './customer/customer.component';
+import { TransferComponent } from './transfer/transfer.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { CustomerComponent } from './customer/customer.component';
     LoginComponent,
     NavitemsComponent,
     EmployeeComponent,
-    CustomerComponent
+    CustomerComponent,
+    TransferComponent
   ],
   imports: [
     BrowserModule,
@@ -33,7 +35,7 @@ import { CustomerComponent } from './customer/customer.component';
       },
       {
         path:"transaction",
-        component:LoginComponent
+        component:TransferComponent
       },
       {
         path:"customer",

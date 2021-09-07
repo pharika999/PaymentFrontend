@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from '../data.service';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -12,7 +13,7 @@ export class LoginComponent implements OnInit {
   customerUser:any;
   employee:any;
   flag:any;
-  constructor(private dataservice:DataService) { 
+  constructor(private dataservice:DataService, private router:Router) { 
     this.flag=true;
     this.customerUser={
       userId:'',
@@ -54,6 +55,8 @@ export class LoginComponent implements OnInit {
         this.apiResult.success=false;
         this.apiResult.error =true;
       })*/
+      console.log("Button clicked")
+      this.router.navigate(['/customer']);
   }
 
 }

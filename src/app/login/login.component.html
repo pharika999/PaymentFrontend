@@ -28,7 +28,7 @@
                          placeholder="Password" [(ngModel)]="customerUser.password">
                     </div>
                     <div class="col-12">
-                        <button type="submit" class="btn btn-dark float-end">Login</button>
+                        <button type="submit" (click)="handleLogin()" class="btn btn-dark float-end">Login</button>
                     </div>
                  </form>
             </div>
